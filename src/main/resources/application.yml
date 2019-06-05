@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  dataSource: #set database config
+    url: jdbc:mysql://localhost:3306/myblog?serverTimezone=UTC&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MySQL8Dialect
